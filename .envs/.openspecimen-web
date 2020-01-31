@@ -1,0 +1,6 @@
+DATABASE_HOST=mysql
+MYSQL_DATABASE=openspecimen
+MYSQL_USER=openspecimen
+MYSQL_PASSWORD=openspecimen
+JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF8
+MYSQL_ROOT_PASSWORD=password
