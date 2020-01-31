@@ -21,7 +21,7 @@ services:
   mysql:
     image: "mysql:latest"
     env_file:
-      - ./.envs/.mysql
+      - ./.envs/.openspecimen-web
     volumes:
       - ./config/openspecimen.cnf:/etc/mysql/conf.d/openspecimen.cnf
       - ./data/mysql:/var/lib/mysql
