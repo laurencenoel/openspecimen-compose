@@ -1,0 +1,27 @@
+version: '3'
+
+volumes:
+  site_data: {}
+
+services:
+  openspecimen:
+    build: ./compose/openspecimen
+    ports: 
+      - 80:8080
+    depends_on:
+      - mysql
+    env_file:
+      - ./.envs/.openspecimen-web
+    volumes:
+      - ./data/mysql:/var/lib/mysql
+      - ./data/os-data:/opt/openspecimen/os-data
+      - ./data/os-plugins:/opt/openspecimen/os-plugins
+      - site_data:/opt/tomcat
+
+  mysql:
+    image: "mysql:latest"
+    env_file:
+      - ./.envs/.mysql
+    volumes:
+      - ./config/openspecimen.cnf:/etc/mysql/conf.d/openspecimen.cnf
+      - ./data/mysql:/var/lib/mysql

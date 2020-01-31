@@ -1,0 +1,4 @@
+MYSQL_ROOT_PASSWORD=password
+MYSQL_DATABASE=openspecimen
+MYSQL_USER=openspecimen
+MYSQL_PASSWORD=openspecimen
