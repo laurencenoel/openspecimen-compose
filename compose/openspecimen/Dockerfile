@@ -17,12 +17,12 @@ RUN wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | a
 RUN apt-get install -y build-essential libpng-dev \
     && mkdir /opt/tomcat/ \
     && useradd -r -m -U -d /opt/tomcat -s /bin/false tomcat \
-    && wget https://www-eu.apache.org/dist/tomcat/tomcat-9/v9.0.30/bin/apache-tomcat-9.0.30.tar.gz -P /tmp/ \
+    && wget https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.31/bin/apache-tomcat-9.0.31.tar.gz -P /tmp/ \
     && tar xf /tmp/apache-tomcat-9*.tar.gz -C /opt/tomcat \
-    && sed -i 's#allow=".*"#allow="(^.*$)"#g' /opt/tomcat/apache-tomcat-9.0.30/webapps/manager/META-INF/context.xml \
-    && ln -s /opt/tomcat/apache-tomcat-9.0.30 /opt/tomcat/latest \
+    && sed -i 's#allow=".*"#allow="(^.*$)"#g' /opt/tomcat/apache-tomcat-9.0.31/webapps/manager/META-INF/context.xml \
+    && ln -s /opt/tomcat/apache-tomcat-9.0.31 /opt/tomcat/latest \
     && sh -c 'chmod +x /opt/tomcat/latest/bin/*.sh' \
-    && chown -R tomcat:tomcat /opt/tomcat/apache-tomcat-9.0.30
+    && chown -R tomcat:tomcat /opt/tomcat/apache-tomcat-9.0.31
 
 # Copy config files
 ADD config/build.properties /tmp/

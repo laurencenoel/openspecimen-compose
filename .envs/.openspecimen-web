@@ -4,6 +4,8 @@ MYSQL_USER=openspecimen
 MYSQL_PASSWORD=openspecimen
 MYSQL_ROOT_PASSWORD=password
 TOMCAT_ADMIN=admin
-TOMCAT_PASSWORD=admin
+TOMCAT_PASSWORD=Hudeca2019!
+RELEASE_URL=https://github.com/laurencenoel/openspecimen
+RELEASEBRANCH=master
 
 JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF8

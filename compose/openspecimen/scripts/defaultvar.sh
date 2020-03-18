@@ -1,5 +1,5 @@
-RELEASEURL="${RELEASEURL:-https://github.com/krishagni/openspecimen}"
-RELEASEBRANCH="${RELEASEBRANCH:-v6.3.x}"
+RELEASEURL="${RELEASEURL:-https://github.com/laurencenoel/openspecimen}"
+RELEASEBRANCH="${RELEASEBRANCH:-master}"
 APP_HOME="${APP_HOME:-/opt/tomcat}"
 APP_DATA_DIR="${APP_DATA_DIR:-/opt/openspecimen/os-data}"
 APP_LOG_CONF="${APP_LOG_CONF:-}"
