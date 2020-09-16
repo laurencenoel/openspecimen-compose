@@ -1,0 +1,9 @@
+---
+continue: "true"
+transfer: "ln_s"
+checksum_algorithm: "File-Size-64"
+path: "/mnt/openspecimen-compose/scripts/transfer_org_path.tsv"
+columns:
+  - target
+  - path
+  - name
